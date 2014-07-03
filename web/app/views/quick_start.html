@@ -1,0 +1,47 @@
+<h2>Register</h2>
+<p>To use the testing platform please register bellow to get an API key that
+will identify your team.
+<p>
+<div class="form-group">
+<label for="reg_mail">Email</label>
+<input ng-model="regEmail" type="text" class="form-control" id="reg_email"/>
+</div>
+<div class="form-group">
+<label for="reg_team_name">Team name</label>
+<input ng-model="regName" type="text" class="form-control" id="reg_team_name"/>
+</div>
+<div class="form-group">
+<button ng-show="newApiKey === null" ng-click="register()" class="btn btn-success">Register</button>
+</div>
+
+<div ng-show="newApiKey" class="panel panel-success">
+    <div class="panel-heading">Congratulations!</div>
+    <div class="panel-body">
+        Your new API key is: {{newApiKey}}
+    </div>
+</div>
+
+<div ng-show="errorMsg" class="panel panel-danger">
+    <div class="panel-heading">Ouch!</div>
+    <div class="panel-body">
+        {{errorMsg}}
+    </div>
+</div>
+
+<hr/>
+
+<h2>Download code</h2>
+<table class="table table-condensed">
+    <tr>
+        <th>Language</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>Python</td>
+        <td><button class="btn btn-default">Download</button></td>
+    </tr>
+    <tr>
+        <td>Other</td>
+        <td><button class="btn btn-link">Read API docs</button></td>
+    </tr>
+</table>

@@ -1,0 +1,19 @@
+
+<p class="input-group">
+<button ng-click="createTask()" class="btn btn-success">Create new task</button>
+
+<p>
+<table class="table table-condensed">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Simulators</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="task in tasks">
+        <td>{{task.name}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.simulators}}</td>
+        <td><button ng-click="hookUpSimulator(task)" class="btn btn-default">Hook up your simulator</button></td>
+    </tr>
+</table>

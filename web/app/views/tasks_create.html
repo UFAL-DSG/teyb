@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h4 class="modal-title"><span class="glyphicon glyphicon-star"></span> Create Task</h4>
+</div>
+
+<div class="modal-body">
+    <ng-form name="createTaskDialog" novalidate role="form">
+        <div class="form-group">
+            <label for="name">Task Name</label>
+            <input type="text" class="form-control" ng-model="data.name" />
+        </div>
+
+        <div class="form-group">
+            <label for="name">Description</label>
+            <textarea class="form-control" ng-model="data.description" />
+        </div>
+
+        <div class="form-group">
+            <label for="name">API key</label>
+            <input type="text" class="form-control" ng-model="data.key" />
+            <span class="help-block">Enter the API key that you got during registration.</span>
+        </div>
+    </ng-form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-success" ng-click="done()">Create</button>
+    <button class="btn btn-default" ng-click="$close()">Close</button>
+</div>
