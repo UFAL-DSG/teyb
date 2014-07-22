@@ -1,0 +1,75 @@
+<h1>Running your system against a simulator</h1>
+<h2>Beginning a dialog</h2>
+
+<p>POST: /run
+<ul>
+<li>Request:</li>
+<pre>
+{
+    'task_id': 'TASK ID',
+    'key': 'YOUR API KEY',
+    'system_id': 'SHORT IDENTIFIER OF YOUR SYSTEM',
+    'data': 'WHAT TO SEND TO THE SIMULATOR'
+}
+</pre>
+</li>
+<li>Response:</li>
+<li>
+<pre>
+{
+    'status': 1,
+    'data': 'SIMULATOR RESPONSE',
+    'dialog_key': u'IDENTIFIER FOR THE DIALOG'
+}
+</pre>
+</li>
+</ul>
+
+<h2>Continuing a dialog</h2>
+
+<p>POST: /run
+<ul>
+
+<li>Request:
+<pre>
+{
+    'task_id': 'TASK ID',
+    'key': 'YOUR API KEY',
+    'system_id': 'SHORT IDENTIFIER OF YOUR SYSTEM',
+    'data': 'WHAT TO SEND TO THE SIMULATOR'
+}
+</pre>
+</li>
+<li>Response:</li>
+<li>
+<pre>
+{
+    'status': STATUS,
+    'data': 'SIMULATOR RESPONE',
+    'dialog_key': u'IDENTIFIER FOR THE DIALOG'
+}
+</pre>
+</li>
+</ul>
+
+
+<h1>Providing a simulator</h1>
+<p>We will call the URL endpoint that you provide to the platform by a HTTP POST request.
+
+<ul>
+    <li>Request:
+<pre>
+{
+    'dialog_key': DIALOG ID,
+    'data': 'DIALOG SYSTEM REQUEST'
+}
+</pre>
+    </li>
+    <li>Expected response:
+<pre>
+{
+    'data': 'DIALOG SYSTEM REQUEST'
+}
+</pre>
+    </li>
+</ul>

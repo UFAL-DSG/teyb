@@ -21,7 +21,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
 
 router = routers.DefaultRouter()
-router.register(r'tasks', TaskViewSet)
+router.register(r'/tasks', TaskViewSet)
 
 
 urlpatterns = patterns('',
@@ -30,8 +30,10 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     #url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/', include(router.urls)),
+    url(r'^$', 'teyb_service.views.index'),
+    url(r'^api', include(router.urls)),
     url(r'^register', 'teyb_service.views.register_team'),
     url(r'^create_task', 'teyb_service.views.create_task'),
     url(r'^hookup_simulator', 'teyb_service.views.hookup_simulator'),
+    url(r'^run', 'teyb_service.views.run'),
 )

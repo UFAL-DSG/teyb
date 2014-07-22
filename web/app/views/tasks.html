@@ -5,12 +5,14 @@
 <p>
 <table class="table table-condensed">
     <tr>
+        <th>ID</th>
         <th>Name</th>
         <th>Description</th>
         <th>Simulators</th>
         <th></th>
     </tr>
     <tr ng-repeat="task in tasks">
+        <td>{{task.id}}</td>
         <td>{{task.name}}</td>
         <td>{{task.description}}</td>
         <td>{{task.simulators}}</td>

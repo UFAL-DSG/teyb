@@ -20,3 +20,18 @@ class Simulator(models.Model):
     team = models.ForeignKey(Team)
     name = models.TextField()
     url = models.TextField()
+
+
+class Dialog(models.Model):
+    dialog_key = models.TextField()
+    dialog_key2 = models.TextField()
+    task = models.ForeignKey(Task)
+    team = models.ForeignKey(Team)
+    system_id = models.CharField(max_length=1000)
+
+
+class Turn(models.Model):
+    request = models.TextField()
+    reply = models.TextField()
+    dialog = models.ForeignKey(Dialog)
+    success = models.BooleanField()
